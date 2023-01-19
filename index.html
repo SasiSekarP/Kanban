@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+
+    <link rel="shortcut icon" href="./icons8-kanban-64.png" type="image/x-icon">
+
+    <!-- style link -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 id="heading">Kanban Board</h1>
+    <div class="spreadsheet" id="spreadsheet" onclick="closeSpredSheet()"></div>
+
+    <div class="formContainer hideMessage saveForm" id="saveForm">
+        <div action="" class="formControle">
+            <div class="FormRow1" id="FormRow1"><div>Add new Note here</div><div class="xbox" onclick="hideNewForm()">x<div class="xhideMessage">close</div> </div></div>
+
+            <div class="formRow2">
+                <div class="cardTitle"><div>Title</div><div class="red">*</div><div class="redMsg red" id="redMsgSave">Must fill this area</div> </div>
+                <input type="text" placeholder="Enter Title" id="saveFormTitle"/>
+            </div>
+            <div class="formRow3">
+                <div class="cardTitle">
+                    Content
+                </div>
+
+                <textarea name="" id="saveFormContent" cols="35" rows="10" placeholder="Enter Details"></textarea>
+
+            </div>
+            <div class="row4 formBtnContainer">
+                <button onclick="saveNewData()" class="editSaveBtn">Save</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="formContainer hideMessage editForm" id="EditForm">
+
+        <div action="" class="formControle">
+            <div class="FormRow1" id="FormRow1"><div>Edit Note</div><div class="xbox" onclick="hideEditForm()">x<div class="xhideMessage">close</div> </div></div>
+
+            <div class="formRow2">
+                <div class="cardTitle">Title <div class="red">*</div><div class="red redMsg" id="redMsgEdit">Must fill this area</div> </div>
+                <input type="text" placeholder="Enter Title" id="editFormInputTag">
+            </div>
+            <div class="formRow3">
+                <div class="cardTitle">
+                    Content
+                </div>
+                <textarea name="" id="editFormTextAreaTag" cols="35" rows="10" placeholder="Enter Details"></textarea>
+            </div>
+            <div class="row4 formBtnContainer">
+                <button onclick="correctData()" class="editSaveBtn">Save</button>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <div class="addBoxContainer" id="addBoxContainer">
+        <div class="addBoxCard">
+            <div class="circle" onclick="showNewForm()">+<div class="NewHiddenMessage">New</div></div>
+        </div>
+    </div>
+
+    <div class="cardContainer" id="cardContainer">
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

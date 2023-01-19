@@ -1,0 +1,257 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Explora&display=swap');
+
+body{
+    background-color: rgb(196, 180, 180);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-family: 'Explora', cursive;
+}
+
+/* addBoxContainer */
+
+.addBoxCard{
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: black 5px 5px 15px;
+    border: solid 1px black;
+}
+
+.circle{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 50px;
+    font-size: 50px;
+    position: relative;
+}
+
+.circle:hover{
+    cursor: pointer;
+}
+
+.NewHiddenMessage{
+    position: absolute;
+    font-size: 20px;
+    left: 110px;
+    top: 10px;
+    background-color: black;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 2px;
+    border: 1px white solid;
+    display: none;
+}
+
+.circle:hover .NewHiddenMessage{
+    display: block;
+}
+
+.addBoxContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0px;
+}
+
+/* cardArea */
+
+.card{
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    box-shadow: black 5px 5px 15px;
+    border: solid 1px black;
+}
+
+.row1{
+    display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.xbox{
+    position: relative;
+    display: flex;
+}
+
+.xhideMessage{
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 2px;
+    border: 1px white solid;
+    left: 20px;
+    bottom: 18px;
+    display: none;
+}
+
+.xbox:hover{
+    cursor: pointer;
+}
+
+.xbox:hover .xhideMessage{
+    display: block;
+}
+
+.cardContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+/* row 2 */
+
+.row2,.row3{
+    padding: 0px 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardTitle,.contant{
+    font-weight: 900;
+}
+
+.cardTitleData,.cardContentData{
+    margin: 5px;
+}
+
+.cardTitle{
+    display: flex;
+}
+
+.red{
+    color: red;
+}
+
+.redMsg{
+    margin-left: 10px;
+    display: none;
+}
+
+.cardContentData{
+    overflow-y: scroll;
+    height: 10rem;
+    text-align: justify;
+}
+
+.row4{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex: 2;
+    align-items: center;
+}
+
+.editSaveBtn{
+    width: 3rem;
+    background-color: blue;
+    color: white;
+    font-weight: 900;
+    border-radius: 4px;
+}
+
+.editSaveBtn:hover{
+    box-shadow: black 2px 2px 5px;
+}
+
+.contant{
+    margin-left: 5px;
+}
+
+/* formContainer */
+
+.formContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+}
+
+.editForm,.saveForm{
+    position: absolute;
+}
+
+.hideMessage{
+    top: -900px;
+}
+
+.showMessage{
+    position: absolute;
+}
+
+.formControle{
+    width: 297px;
+    height: 300px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+.FormRow1{
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+}
+.formRow2{
+    padding: 0px 5px 0px 5px;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+}
+
+input,textarea{
+    outline: none;
+    padding: 0px 5px;
+}
+
+.formRow3{
+    padding: 5px;
+}
+
+.formBtnContainer{
+    height: 40px;
+}
+
+.spreadsheet{
+    background-color: blue;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.6;
+    z-index: 1;
+    display: none;
+}
